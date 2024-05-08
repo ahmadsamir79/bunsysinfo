@@ -9,5 +9,10 @@ pipeline {
          sh 'curl -fsSL https://bun.sh/install | bash -s "bun-v1.0.0"'
        }
      }
+     stage('Install application dependencies') {
+       steps {
+         sh '${BUNPATH}/bun install'
+       }
+     }
    }
  }
