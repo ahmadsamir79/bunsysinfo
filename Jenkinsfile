@@ -1,5 +1,8 @@
 pipeline {
    agent any
+   environment{
+       BUNPATH="${HOME}/.bun/bin"
+   }
    stages {
      stage('Install bun') {
        steps {
